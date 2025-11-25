@@ -8,7 +8,10 @@ template<typename T>
 class MyVector {
     T* data;            // 동적 배열을 가리키는 포인터
     size_t cap;         // 현재 할당된 배열 크기
-    size_t length;      // 실제 저장된 요소 개수    
+    size_t length;      // 실제 저장된 요소 개수
+    
+    void realloc_data(size_t new_cap);
+    
 public:
 
     MyVector(std::initializer_list<T> init) {
